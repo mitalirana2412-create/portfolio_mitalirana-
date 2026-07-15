@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitali Rana ✡ Contact</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Caveat:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{
+  --cream:       #F6EFE2;
+  --paper:       #FBF6EC;
+  --ink:         #241C14;
+  --pink:        #DBA0B2;
+  --pink-deep:   #C5798F;
+  --green:       #8BA347;
+  --green-deep:  #6C8236;
+  --orange:      #E66946;
+  --mint:        #C5DBD5;
+  --mint-deep:   #A9C9C1;
+
+  --font-display: 'Unbounded', sans-serif;
+  --font-script:  'Caveat', cursive;
+  --font-body:    'Space Grotesk', sans-serif;
+
+  --border: 2.5px solid var(--ink);
+  --shadow-hard: 6px 6px 0 var(--ink);
+  --shadow-soft: 8px 10px 24px rgba(36,28,20,0.12);
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img{ max-width:100%; display:block; }
+a{ color: inherit; text-decoration: none; }
+h1,h2,h3,h4{ font-family: var(--font-display); margin:0; line-height:1.05; }
+p{ margin:0; }
+
+body::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  pointer-events:none;
+  z-index: 500;
+  opacity: 0.05;
+  background-image: radial-gradient(circle, var(--ink) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+}
+
+:focus-visible{
+  outline: 3px dashed var(--orange);
+  outline-offset: 3px;
+}
+
+.wrap{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.masthead{
+  position: sticky;
+  top:0;
+  z-index: 100;
+  background: var(--cream);
+  border-bottom: var(--border);
+}
+.masthead-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 16px 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.brandmark{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family: var(--font-display);
+  font-weight:800;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  cursor:pointer;
+}
+.brandmark .stamp{
+  width: 40px; height:40px;
+  border-radius:50%;
+  border: 2px solid var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  transform: rotate(-8deg);
+  background: var(--pink);
+  font-family: var(--font-script);
+  font-size: 1.3rem;
+  flex-shrink:0;
+}
+.issue-tag{
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity:0.6;
+  display:block;
+  font-weight:600;
+}
+.navlinks{
+  display:flex;
+  gap: 6px;
+  align-items:center;
+}
+.navlinks a{
+  font-family: var(--font-body);
+  font-weight:600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  transition: all .18s ease;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.navlinks a:hover{
+  border-color: var(--ink);
+  background: var(--mint);
+}
+.navlinks a.active{
+  border-color: var(--ink);
+  background: var(--orange);
+  color: var(--paper);
+}
+.nav-toggle{
+  display:none;
+  background:none; border: 2px solid var(--ink); border-radius: 8px;
+  width:42px; height:42px;
+  font-family: var(--font-display);
+  cursor:pointer;
+}
+
+@media (max-width: 760px){
+  .nav-toggle{ display:block; }
+  .navlinks{
+    position:absolute;
+    top: 100%;
+    left:0; right:0;
+    background: var(--cream);
+    flex-direction:column;
+    align-items:stretch;
+    border-bottom: var(--border);
+    padding: 10px 20px 18px;
+    display:none;
+  }
+  .navlinks.open{ display:flex; }
+  .navlinks a{ text-align:center; }
+}
+
+footer{
+  background: var(--ink);
+  color: var(--paper);
+  padding: 56px 0 30px;
+  margin-top: 0;
+}
+
+.section{ padding: 84px 0; position:relative; }
+.bg-cream{ background: var(--cream); }
+
+@media (max-width: 640px){
+  .section{ padding: 56px 0; }
+  body{ font-size: 16px; }
+}
+
+.contact-h1{
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight:900;
+  margin-bottom: 18px;
+}
+.contact-details{ margin-top: 30px; display:flex; flex-direction:column; gap: 14px; }
+.contact-line{
+  display:flex; align-items:center; gap: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  width: fit-content;
+  border-bottom: 2px solid transparent;
+  transition: border-color .15s ease;
+}
+.contact-line:hover{ border-color: var(--ink); }
+.contact-icon{
+  width:34px; height:34px;
+  border-radius:50%;
+  border: 2px solid var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  background: var(--paper);
+  flex-shrink:0;
+}
+
+.contact-envelope{ position:relative; margin-top: 60px; }
+.envelope{
+  width: 280px; height: 190px;
+  background: var(--pink);
+  border: 2.5px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  position:relative;
+  transform: rotate(-3deg);
+  display:flex; align-items:flex-end; justify-content:center;
+  padding-bottom: 22px;
+}
+.envelope-flap{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:0;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-top: 95px solid var(--pink-deep);
+}
+.envelope-flap::after{
+  content:"";
+  position:absolute;
+  top: -95px; left: -140px;
+  width: 280px; height: 95px;
+  border: 2.5px solid var(--ink);
+  border-top:none;
+  border-bottom:none;
+  box-sizing:border-box;
+  pointer-events:none;
+}
+.envelope-text{
+  font-size: 1.6rem;
+  color: var(--ink);
+  z-index:2;
+}
+
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brandmark nav-link" href="index.html">
+      <span class="stamp">M</span>
+      <span>
+        MITALI RANA ✡
+        <span class="issue-tag">Graphic Designer</span>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="navlinks" id="navLinks">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">My Story</a>
+      <a class="nav-link" href="work.html">Work</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- CONTACT SECTION -->
+  <section class="section bg-cream">
+    <div class="wrap">
+      <div style="max-width: 700px;">
+        <h1 class="contact-h1">Get In Touch</h1>
+        <p style="font-size: 1.05rem; opacity: 0.88; margin-bottom: 40px;">I'd love to hear about your project. Reach out and let's create something amazing together!</p>
+        
+        <div class="contact-details">
+          <a href="mailto:mitalirana2412@gmail.com" class="contact-line">
+            <span class="contact-icon">✉</span>
+            <span>mitalirana2412@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Envelope Illustration -->
+      <div class="contact-envelope">
+        <div class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-text">💌</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="padding: 40px 28px;">
+    <div style="text-align: center;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: var(--paper);">Mitali Rana</h3>
+      <p style="color: var(--paper); opacity: 0.8;">Graphic Designer</p>
+      <p style="color: var(--paper); opacity: 0.6; margin-top: 20px; font-size: 0.8rem;">&copy; 2026 Mitali Rana</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
